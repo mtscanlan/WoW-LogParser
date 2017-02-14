@@ -1,0 +1,56 @@
+﻿<Window x:Class="BabbleMouth.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Babble Mouth - Skunkworks Log Parser" Width="480" Height="640" ResizeMode="NoResize" Background="DimGray">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Menu Grid.ColumnSpan="2">
+            <MenuItem Header="FILE" Margin="5,0">
+                <MenuItem Name="ImportCombatLogMenuItem" Header="Import Combat Log..." Click="ImportCombatLogMenuItem_Click" Foreground="Black" />
+                <Separator />
+                <MenuItem Name="ExitMenuItem" Header="Exit" Foreground="Black" />
+            </MenuItem>
+            <MenuItem Header="TOOLS" Margin="5,0">
+                <MenuItem Name="ViewDeathLogsMenuItem" Header="View Death Logs..." Foreground="DarkGray" IsEnabled="False" />
+            </MenuItem>
+            <MenuItem Header="HELP" Margin="5,0">
+                <MenuItem Name="AboutMenuItem" Header="About BabbleMouth" Click="AboutMenuItem_Click" Foreground="Black" />
+            </MenuItem>
+        </Menu>
+        <TabControl Margin="5" Grid.Row="1" Background="DimGray">
+            <TabItem Header="Players" Background="DimGray">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="Auto" MinWidth="175" />
+                    </Grid.ColumnDefinitions>
+                    <ListBox Name="PlayerListBox" SelectionMode="Extended" />
+                    <Button Name="AddPlayerButton" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Column="1" Height="23" Content="Add Player" Click="AddPlayerButton_Click" />
+                    <Button Name="RemovePlayerButton" VerticalAlignment="Top" Margin="5,28,0,0" Grid.Column="1" Height="23" Content="Remove Selected Player(s)" Click="RemovePlayerButton_Click" />
+                    <Button Name="ExportAllPlayerBBCodeButton" VerticalAlignment="Top" Margin="5,56,0,0" Grid.Column="1" Height="23" Content="Export All To BBCode" Click="ExportAllPlayerBBCodeButton_Click" />
+                    <Button Name="ExportSelectedPlayerBBCodeButton" VerticalAlignment="Top" Margin="5,84,0,0" Grid.Column="1" Height="23" Content="Export Selected To BBCode" Click="ExportSelectedPlayerBBCodeButton_Click" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Spells" Background="DimGray">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="Auto" MinWidth="175" />
+                    </Grid.ColumnDefinitions>
+                    <ListBox Name="SpellsListBox" SelectionMode="Extended" />
+                    <Button Name="AddSpellInfoButton" VerticalAlignment="Top" Margin="5,0,0,0" Grid.Column="1" Height="23" Content="Add Spell" Click="AddSpellInfoButton_Click" />
+                    <Button Name="RemoveSpellButton" VerticalAlignment="Top" Margin="5,28,0,0" Grid.Column="1" Height="23" Content="Remove Selected Spell(s)" Click="RemoveSpellButton_Click" />
+                    <Button Name="ExportAllSpellBBCodeButton" VerticalAlignment="Top" Margin="5,56,0,0" Grid.Column="1" Height="23" Content="Export All To BBCode" Click="ExportAllSpellBBCodeButton_Click" />
+                    <Button Name="ExportSelectedSpellBBCodeButton" VerticalAlignment="Top" Margin="5,84,0,0" Grid.Column="1" Height="23" Content="Export Selected To BBCode" Click="ExportSelectedSpellBBCodeButton_Click" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StatusBar Name="StatusBarOutput" Grid.Row="2" Height="23" Background="BlueViolet" Foreground="White">
+            <TextBlock Name="StatusBarTextBox" />
+        </StatusBar>
+    </Grid>
+</Window>

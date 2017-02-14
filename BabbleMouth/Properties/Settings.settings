@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BabbleMouth.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Aydin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Priest</Value>
+    </Setting>
+    <Setting Name="Infinitum" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Druid</Value>
+    </Setting>
+    <Setting Name="Tripel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Monk</Value>
+    </Setting>
+    <Setting Name="Grazdak" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Death Knight</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
